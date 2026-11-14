@@ -6,34 +6,46 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 import edge_tts
 
-TITRE = "LE SOMMEIL DES CHEVAUX"
+TITRE = "LE SECRET DES CHEVAUX"
 
 TEXTE = (
     "Imagine un cheval dans un pré, les yeux fermés. "
     "Il semble dormir profondément, mais il est debout ! "
     "Comment est-ce possible ? Les chevaux possèdent "
-    "un mécanisme naturel qui leur permet de bloquer "
-    "certaines articulations et de rester debout sans "
-    "faire d'effort musculaire important. Cela leur permet "
-    "de se reposer tout en restant prêts à réagir au danger. "
-    "Mais attention, il y a une surprise : pour atteindre "
-    "les phases de sommeil profond, ils doivent aussi "
-    "s'allonger. Ils ne dorment donc pas toujours debout. "
-    "Un incroyable mécanisme imaginé par la nature !"
+    "un mécanisme naturel étonnant. Certaines articulations "
+    "peuvent se bloquer pour leur permettre de rester debout "
+    "sans dépenser beaucoup d'énergie. Cela leur permet de "
+    "se reposer tout en restant attentifs à leur environnement. "
+    "Mais voici le détail le plus surprenant : dormir debout "
+    "ne suffit pas. Pour atteindre le sommeil profond, les "
+    "chevaux doivent aussi s'allonger. Ils alternent donc "
+    "plusieurs positions pendant leur repos. La nature a "
+    "vraiment inventé des mécanismes fascinants !"
 )
+
+PHRASES = [
+    "Imagine un cheval dans un pré, les yeux fermés.",
+    "Il semble dormir profondément, mais il est debout !",
+    "Comment est-ce possible ?",
+    "Les chevaux possèdent un mécanisme naturel étonnant.",
+    "Certaines articulations peuvent se bloquer.",
+    "Cela leur permet de rester debout sans trop d'effort.",
+    "Ils peuvent ainsi se reposer tout en restant attentifs.",
+    "Mais voici le détail le plus surprenant :",
+    "Pour atteindre le sommeil profond, ils doivent aussi s'allonger.",
+    "Ils alternent donc plusieurs positions pendant leur repos.",
+    "La nature a vraiment inventé des mécanismes fascinants !"
+]
 
 DOSSIER = Path("videos")
 DOSSIER.mkdir(exist_ok=True)
 
-def creer_image():
-    image = Image.new("RGB", (1080, 1920), "#10172A")
-    dessin = ImageDraw.Draw(image)
-
-    dessin.ellipse((650, 250, 1250, 850), fill="#243B61")
-    dessin.ellipse((-250, 1100, 500, 1850), fill="#1D3150")
-    dessin.rectangle((0, 0, 1080, 18), fill="#FFD166")
-
-    image.save(DOSSIER / "fond.png")
+def horloge(secondes):
+    heures = int(secondes // 3600)
+    minutes = int((secondes % 3600) // 60)
+    secs = int(secondes % 60)
+    ms = int((secondes % 1) * 1000)
+    return f"{heures:02}:{minutes:02}:{secs:02},{ms:03}"
 
 async def creer_voix():
     voix = edge_tts.Communicate(
@@ -42,42 +54,44 @@ async def creer_voix():
     )
     await voix.save(str(DOSSIER / "voix.mp3"))
 
-def horloge(secondes):
-    heures = int(secondes // 3600)
-    minutes = int((secondes % 3600) // 60)
-    secondes_entieres = int(secondes % 60)
-    millisecondes = int((secondes % 1) * 1000)
+def creer_image():
+    image = Image.new("RGB", (1080, 1920), "#10172A")
+    dessin = ImageDraw.Draw(image)
 
-    return (
-        f"{heures:02}:{minutes:02}:"
-        f"{secondes_entieres:02},{millisecondes:03}"
+    dessin.rectangle((0, 0, 1080, 18), fill="#FFD166")
+    dessin.ellipse((650, 280, 1250, 880), fill="#243B61")
+    dessin.ellipse((-250, 1100, 500, 1850), fill="#1D3150")
+
+    chemin = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    police = ImageFont.truetype(chemin, 76)
+
+    dessin.text(
+        (80, 430),
+        "LE SECRET",
+        font=police,
+        fill="white"
+    )
+    dessin.text(
+        (80, 530),
+        "DES CHEVAUX",
+        font=police,
+        fill="#FFD166"
     )
 
-def creer_sous_titres(duree):
-    phrases = [
-        "Imagine un cheval dans un pré, les yeux fermés.",
-        "Il semble dormir profondément, mais il est debout !",
-        "Comment est-ce possible ?",
-        "Les chevaux possèdent un mécanisme naturel.",
-        "Il leur permet de rester debout sans effort important.",
-        "Ils peuvent ainsi se reposer tout en restant vigilants.",
-        "Mais voici la surprise :",
-        "Pour dormir profondément, ils doivent aussi s'allonger.",
-        "Ils ne dorment donc pas toujours debout.",
-        "Un incroyable mécanisme imaginé par la nature !"
-    ]
+    image.save(DOSSIER / "fond.png")
 
-    total = sum(len(p) for p in phrases)
+def creer_sous_titres(duree):
+    total = sum(len(p) for p in PHRASES)
     debut = 0
     lignes = []
 
-    for numero, phrase in enumerate(phrases, 1):
+    for numero, phrase in enumerate(PHRASES, 1):
         fin = debut + duree * len(phrase) / total
 
         lignes.extend([
             str(numero),
             f"{horloge(debut)} --> {horloge(fin)}",
-            phrase,
+            "\n".join(textwrap.wrap(phrase, width=42)),
             ""
         ])
 
@@ -100,7 +114,6 @@ async def main():
     ], capture_output=True, text=True, check=True)
 
     duree = float(resultat.stdout.strip())
-
     creer_sous_titres(duree)
 
     filtre = (
@@ -110,9 +123,9 @@ async def main():
         "d=1:s=1080x1920:fps=25,"
         "subtitles=videos/sous-titres.srt:"
         "force_style='FontName=DejaVu Sans,"
-        "FontSize=20,PrimaryColour=&H00FFFFFF,"
+        "FontSize=16,PrimaryColour=&H00FFFFFF,"
         "OutlineColour=&H00000000,BorderStyle=1,"
-        "Outline=3,Alignment=2,MarginV=230'"
+        "Outline=3,Alignment=2,MarginV=100'"
     )
 
     subprocess.run([
@@ -127,10 +140,11 @@ async def main():
         "-b:a", "192k",
         "-pix_fmt", "yuv420p",
         "-shortest",
+        "-movflags", "+faststart",
         str(DOSSIER / "daily-fact-short.mp4")
     ], check=True)
 
-    print("Video Daily Fact Short creee !")
+    print("Video creee avec succes !")
     print("Duree :", round(duree, 1), "secondes")
 
 if __name__ == "__main__":
