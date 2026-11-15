@@ -1,0 +1,27 @@
+name: Organiser les fichiers
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  organiser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ranger les fichiers dans les bons dossiers
+        run: |
+          rangeur() { if [ -f "$1" ]; then mkdir -p "$(dirname "$2")"; git mv "$1" "$2"; echo "range: $1 -> $2"; fi; }
+          for f in camera.js char.js index.jsx kit.js props.js Root.jsx scenes.js Story.jsx; do rangeur "$f" "src/$f"; done
+          for f in story.json timing.json; do rangeur "$f" "src/data/$f"; done
+          for f in _test_locs.json bus_de_six_heures.json cadeau_du_lundi.json prof_de_dessin.json; do rangeur "$f" "stories/$f"; done
+          for f in fake_timing.py generate_story.py make_voice.py mux.py stills.sh upload_youtube.py; do rangeur "$f" "tools/$f"; done
+          rangeur .keep assets/music/.keep
+          if [ -f daily.yml ]; then git rm -q daily.yml; fi
+          git config user.name "video-bot"
+          git config user.email "video-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Ranger les fichiers" && git push)
