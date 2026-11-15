@@ -1,0 +1,256 @@
+{
+ "title": "Un cadeau sur mon bureau chaque lundi",
+ "description": "Chaque lundi, un cadeau anonyme apparaissait sur son bureau. La vérité l'a bouleversée.",
+ "tags": [
+  "minidrame",
+  "histoire",
+  "émotion",
+  "frère",
+  "shorts"
+ ],
+ "narrateur": "f",
+ "characters": {
+  "mariam": {
+   "palette": "yellow",
+   "hair": "bun",
+   "hairColor": "black",
+   "skin": "brown"
+  },
+  "sekou": {
+   "palette": "green",
+   "hair": "spiky",
+   "hairColor": "black",
+   "skin": "dark",
+   "scale": 0.8
+  }
+ },
+ "shots": [
+  {
+   "loc": "classroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "mariam",
+   "text": "Chaque lundi, je trouvais un petit cadeau sur mon bureau.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "C",
+     "emo": "surprised",
+     "gesture": "none",
+     "emote": "exclaim",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "medium",
+   "move": "right",
+   "focus": "mariam",
+   "text": "Un bonbon, un stylo, un dessin. Jamais de nom.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "C",
+     "emo": "happy",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "gift"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "wide",
+   "move": "in",
+   "focus": "mariam",
+   "text": "J'ai cherché pendant des semaines. Je soupçonnais tout le monde.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "L",
+     "emo": "smirk",
+     "gesture": "point",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "sekou",
+     "slot": "R",
+     "emo": "neutral",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "two",
+   "move": "in",
+   "focus": "sekou",
+   "text": "J'ai même accusé mon petit frère, qui a nié en rougissant.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "L",
+     "emo": "angry",
+     "gesture": "point",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "sekou",
+     "slot": "R",
+     "emo": "scared",
+     "gesture": "none",
+     "emote": "sweat",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "street_day",
+   "cam": "medium",
+   "move": "in",
+   "focus": "mariam",
+   "text": "Un lundi, le cadeau n'est pas venu. Ni la semaine d'après.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "C",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "dots",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "mariam",
+   "text": "Sans m'en rendre compte, ce petit geste était devenu ma joie.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "C",
+     "emo": "cry",
+     "gesture": "face",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "street_night",
+   "cam": "wide",
+   "move": "out",
+   "focus": "mariam",
+   "text": "Un soir, je suis rentrée par un autre chemin.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "C",
+     "emo": "tired",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "street_night",
+   "cam": "two",
+   "move": "in",
+   "focus": "sekou",
+   "text": "Là, j'ai vu mon frère vendre des mangues sur le trottoir, dans le froid.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "L",
+     "emo": "surprised",
+     "gesture": "none",
+     "emote": "exclaim",
+     "prop": "none"
+    },
+    {
+     "id": "sekou",
+     "slot": "R",
+     "emo": "tired",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "livingroom",
+   "cam": "two",
+   "move": "in",
+   "focus": "sekou",
+   "text": "Je lui ai demandé pourquoi. Il a haussé les épaules.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "L",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "sekou",
+     "slot": "R",
+     "emo": "shy",
+     "gesture": "shrug",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "livingroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "sekou",
+   "text": "Parce que tu souris moins depuis que papa est parti.",
+   "cast": [
+    {
+     "id": "sekou",
+     "slot": "C",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "dots",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "park_sunset",
+   "cam": "two",
+   "move": "right",
+   "focus": "mariam",
+   "text": "Depuis, c'est moi qui lui laisse un cadeau chaque lundi.",
+   "cast": [
+    {
+     "id": "mariam",
+     "slot": "L",
+     "emo": "love",
+     "gesture": "none",
+     "emote": "heart",
+     "prop": "gift"
+    },
+    {
+     "id": "sekou",
+     "slot": "R",
+     "emo": "happy",
+     "gesture": "up",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  }
+ ]
+}

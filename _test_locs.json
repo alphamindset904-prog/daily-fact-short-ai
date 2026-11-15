@@ -1,0 +1,140 @@
+{
+ "title": "t",
+ "description": "d",
+ "tags": [],
+ "characters": {
+  "a": {
+   "palette": "orange",
+   "hair": "curly",
+   "skin": "tan",
+   "glasses": true
+  },
+  "b": {
+   "palette": "teal",
+   "hair": "bun",
+   "hairColor": "red",
+   "skin": "light"
+  },
+  "c": {
+   "palette": "black",
+   "hair": "fringe",
+   "skin": "dark",
+   "hat": "beanie"
+  }
+ },
+ "shots": [
+  {
+   "loc": "classroom",
+   "cam": "two",
+   "focus": "a",
+   "move": "in",
+   "text": "Premier jour dans la nouvelle classe, tout le monde me regardait.",
+   "cast": [
+    {
+     "id": "a",
+     "slot": "L",
+     "emo": "scared",
+     "emote": "sweat"
+    },
+    {
+     "id": "b",
+     "slot": "R",
+     "emo": "happy",
+     "gesture": "wave"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "medium",
+   "focus": "c",
+   "move": "left",
+   "text": "Dans le couloir, il m'a bousculée sans même s'excuser.",
+   "cast": [
+    {
+     "id": "c",
+     "slot": "C",
+     "emo": "angry",
+     "emote": "anger"
+    }
+   ]
+  },
+  {
+   "loc": "street_night",
+   "cam": "low",
+   "focus": "a",
+   "move": "in",
+   "text": "Cette nuit-là, je suis rentrée seule sous la lumière des lampadaires.",
+   "cast": [
+    {
+     "id": "a",
+     "slot": "C",
+     "emo": "sad",
+     "gesture": "cross"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "wide",
+   "focus": "a",
+   "move": "out",
+   "text": "Tous les élèves ont éclaté de rire en même temps.",
+   "cast": [
+    {
+     "id": "a",
+     "slot": "L",
+     "emo": "shy"
+    },
+    {
+     "id": "b",
+     "slot": "C",
+     "emo": "smirk",
+     "gesture": "point"
+    },
+    {
+     "id": "c",
+     "slot": "R",
+     "emo": "happy",
+     "prop": "phone"
+    }
+   ]
+  },
+  {
+   "loc": "park_day",
+   "cam": "two",
+   "focus": "b",
+   "move": "right",
+   "text": "Elle m'a tendu un bouquet de fleurs, et j'ai compris.",
+   "cast": [
+    {
+     "id": "a",
+     "slot": "L",
+     "emo": "surprised",
+     "emote": "exclaim"
+    },
+    {
+     "id": "b",
+     "slot": "R",
+     "emo": "love",
+     "prop": "flowers"
+    }
+   ]
+  },
+  {
+   "loc": "bedroom",
+   "cam": "close",
+   "focus": "a",
+   "move": "in",
+   "text": "Ce soir-là, j'ai enfin souri.",
+   "cast": [
+    {
+     "id": "a",
+     "slot": "C",
+     "emo": "happy",
+     "gesture": "up"
+    }
+   ]
+  }
+ ]
+}

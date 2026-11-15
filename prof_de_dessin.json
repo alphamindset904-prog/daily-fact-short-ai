@@ -1,0 +1,272 @@
+{
+ "title": "Mon prof de dessin me détestait",
+ "description": "Son professeur barrait ses dessins en rouge chaque semaine. Le jour du concours, tout a changé.",
+ "tags": [
+  "minidrame",
+  "histoire",
+  "école",
+  "professeur",
+  "shorts"
+ ],
+ "narrateur": "m",
+ "characters": {
+  "ibrahima": {
+   "palette": "orange",
+   "hair": "curly",
+   "hairColor": "black",
+   "skin": "dark"
+  },
+  "prof": {
+   "palette": "gray",
+   "hair": "bald",
+   "skin": "tan",
+   "glasses": true
+  }
+ },
+ "shots": [
+  {
+   "loc": "classroom",
+   "cam": "two",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "Mon professeur de dessin me détestait. Du moins, c'est ce que je croyais.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "L",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "prof",
+     "slot": "R",
+     "emo": "angry",
+     "gesture": "none",
+     "emote": "anger",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "prof",
+   "text": "Chaque semaine, il barrait mes dessins en rouge.",
+   "cast": [
+    {
+     "id": "prof",
+     "slot": "C",
+     "emo": "angry",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "medium",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "Trop sombre. Trop triste. Recommence.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "C",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "book"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "medium",
+   "move": "left",
+   "focus": "ibrahima",
+   "text": "J'ai failli abandonner l'école trois fois.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "C",
+     "emo": "angry",
+     "gesture": "cross",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "bedroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "La nuit, je dessinais quand même, en cachette.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "C",
+     "emo": "tired",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "wide",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "Le jour de la remise des prix, il m'a appelé devant toute la classe.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "L",
+     "emo": "scared",
+     "gesture": "none",
+     "emote": "sweat",
+     "prop": "none"
+    },
+    {
+     "id": "prof",
+     "slot": "R",
+     "emo": "neutral",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "two",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "Je pensais qu'il allait m'humilier encore une fois.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "L",
+     "emo": "scared",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "prof",
+     "slot": "R",
+     "emo": "smirk",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "prof",
+   "text": "Il a dit : ce garçon a gagné la bourse nationale.",
+   "cast": [
+    {
+     "id": "prof",
+     "slot": "C",
+     "emo": "happy",
+     "gesture": "up",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "classroom",
+   "cam": "close",
+   "move": "in",
+   "focus": "ibrahima",
+   "text": "Il avait envoyé mes dessins au concours, sans me le dire.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "C",
+     "emo": "cry",
+     "gesture": "none",
+     "emote": "exclaim",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "two",
+   "move": "in",
+   "focus": "prof",
+   "text": "Je lui ai demandé pourquoi il était si dur avec moi.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "L",
+     "emo": "sad",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    },
+    {
+     "id": "prof",
+     "slot": "R",
+     "emo": "smirk",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "hallway",
+   "cam": "close",
+   "move": "in",
+   "focus": "prof",
+   "text": "Parce que le talent sans effort ne mène nulle part.",
+   "cast": [
+    {
+     "id": "prof",
+     "slot": "C",
+     "emo": "smirk",
+     "gesture": "none",
+     "emote": "sparkle",
+     "prop": "none"
+    }
+   ]
+  },
+  {
+   "loc": "park_sunset",
+   "cam": "two",
+   "move": "out",
+   "focus": "ibrahima",
+   "text": "Aujourd'hui, j'enseigne le dessin. Et je barre les dessins en rouge.",
+   "cast": [
+    {
+     "id": "ibrahima",
+     "slot": "L",
+     "emo": "smirk",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "book"
+    },
+    {
+     "id": "prof",
+     "slot": "R",
+     "emo": "happy",
+     "gesture": "none",
+     "emote": "none",
+     "prop": "none"
+    }
+   ]
+  }
+ ]
+}

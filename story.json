@@ -1,0 +1,36 @@
+{
+  "title": "Il me laissait sa place chaque matin",
+  "description": "Chaque matin, un inconnu lui laissait sa place dans le bus. Jusqu'au jour où il a disparu. Mini-drame.",
+  "tags": ["minidrame", "histoire", "émotion", "histoirevraie", "shorts"],
+  "characters": {
+    "aissatou": {"palette": "pink", "hair": "long", "hairColor": "black", "skin": "brown"},
+    "mamadou": {"palette": "blue", "hair": "spiky", "hairColor": "black", "skin": "dark", "hat": "none"},
+    "chauffeur": {"palette": "gray", "hair": "bald", "skin": "tan", "glasses": true}
+  },
+  "shots": [
+    {"loc": "street_day", "cam": "medium", "focus": "aissatou", "move": "in", "text": "Chaque matin, dans le bus de six heures, un inconnu me laissait sa place.",
+     "cast": [{"id": "aissatou", "slot": "C", "emo": "tired"}]},
+    {"loc": "street_day", "cam": "two", "focus": "mamadou", "move": "in", "text": "Il ne disait jamais rien. Il se levait, il souriait, et il allait au fond.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "neutral"}, {"id": "mamadou", "slot": "R", "emo": "happy", "gesture": "wave"}]},
+    {"loc": "bedroom", "cam": "close", "focus": "aissatou", "move": "in", "text": "Je venais d'arriver dans cette ville, seule, après la mort de ma mère.",
+     "cast": [{"id": "aissatou", "slot": "C", "emo": "cry", "gesture": "face"}]},
+    {"loc": "bedroom", "cam": "medium", "focus": "aissatou", "move": "right", "text": "Les nuits étaient longues. Ce petit geste était ma seule douceur.",
+     "cast": [{"id": "aissatou", "slot": "C", "emo": "sad", "emote": "heart"}]},
+    {"loc": "street_day", "cam": "medium", "focus": "aissatou", "move": "in", "text": "Un matin, il n'était pas là. Ni le lendemain. Ni de toute la semaine.",
+     "cast": [{"id": "aissatou", "slot": "C", "emo": "surprised", "emote": "question"}]},
+    {"loc": "street_day", "cam": "wide", "focus": "aissatou", "move": "in", "text": "J'ai fini par demander au chauffeur. Il m'a regardée longtemps.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "scared", "emote": "sweat"}, {"id": "chauffeur", "slot": "R", "emo": "sad"}]},
+    {"loc": "street_day", "cam": "close", "focus": "chauffeur", "move": "in", "text": "Mademoiselle, ce garçon ne prenait pas ce bus pour aller quelque part.",
+     "cast": [{"id": "chauffeur", "slot": "C", "emo": "sad", "emote": "dots"}]},
+    {"loc": "park_sunset", "cam": "two", "focus": "aissatou", "move": "in", "text": "Il le prenait chaque jour depuis la mort de votre mère.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "surprised", "emote": "exclaim"}, {"id": "chauffeur", "slot": "R", "emo": "neutral"}]},
+    {"loc": "park_sunset", "cam": "medium", "focus": "aissatou", "move": "left", "text": "Elle l'avait aidé, autrefois. Il lui avait promis de veiller sur vous.",
+     "cast": [{"id": "aissatou", "slot": "C", "emo": "cry", "gesture": "face"}]},
+    {"loc": "livingroom", "cam": "wide", "focus": "mamadou", "move": "in", "text": "J'ai trouvé son adresse. Sa maison était petite, avec une photo de ma mère.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "sad", "prop": "letter"}, {"id": "mamadou", "slot": "R", "emo": "shy"}]},
+    {"loc": "livingroom", "cam": "two", "focus": "mamadou", "move": "in", "text": "Il m'a dit : je n'ai jamais su comment te le dire.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "cry"}, {"id": "mamadou", "slot": "R", "emo": "shy", "gesture": "shrug"}]},
+    {"loc": "park_sunset", "cam": "two", "focus": "aissatou", "move": "out", "text": "Aujourd'hui, nous prenons toujours le même bus. Mais maintenant, nous sommes assis côte à côte.",
+     "cast": [{"id": "aissatou", "slot": "L", "emo": "love", "emote": "heart"}, {"id": "mamadou", "slot": "R", "emo": "happy"}]}
+  ]
+}
